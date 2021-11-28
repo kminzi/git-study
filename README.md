@@ -80,4 +80,3 @@ https://learngitbranching.js.org/?locale=ko
 
 
 ### 3. Revert 사용하기
-의미없는...
