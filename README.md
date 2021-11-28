@@ -3,8 +3,6 @@ study git, github, sourcetree..
 
 
 ## Git 기본 용어
-
----------
 - **Add** : 내 컴퓨터에서 작업한 파일들을 스테이지에 추가
 - **Commit** : 스테이지에 올라온 파일들을 가지고 내 컴퓨터에 저장
 - **Push** : 커밋들을 원격 저장소에 업로드
@@ -12,8 +10,6 @@ study git, github, sourcetree..
 
 
 ## Branch 관리하기
-
----------
 - **Branch**
 : 브랜치는 기존 내용을 유지한 상태로 새로운 내용을 개발할 때 사용한다.
   <br>
@@ -42,8 +38,6 @@ study git, github, sourcetree..
 https://learngitbranching.js.org/?locale=ko
 #
 ## Merge 중에 충돌 해결하기
-
-------------
 ### 충돌의 발생원인
 - 자동병합을 실패했을 경우 발생
 - 주로 두 커밋이 같은 파일을 편집했을 경우 발생
@@ -59,22 +53,19 @@ https://learngitbranching.js.org/?locale=ko
   
 ### 충돌을 해결했는데 이상해졌다면
 - 되돌리기가 가능하므로 너무 걱정하지 말기!
-#
 
+#
 ## Commit 되돌리기
 ### 1. Reset 사용하기
 - 장점 : 쉽고 직관적
 - 단점 : 내용이 사라질 위험이 있음. 특히 hard Reset을 사용하면 더 위험하다! 
 - sourceTree에서는 commit내용 우클릭 후 '(브랜치이름)을 여기로 되돌리기'를 사용한다.
 
-### Reset 과정 중에 문제 해결
-
-----------
-원격 저장소의 버전은 reset 이전이므로, reset이후 최초 push를 할 때에는 pull과 함께 수행하라는 문구가 발생한다.
-
-1. **git push --force를 수행**  
+> ### Reset 과정 중에 문제 해결
+> 원격 저장소의 버전은 reset 이전이므로, reset이후 최초 push를 할 때에는 pull과 함께 수행하라는 문구가 발생한다.
+>1. **git push --force를 수행**  
    (sourceTree에서는 지원하지 않으므로 CLI를 통해)
-2. 원격 저장소가 가리키는 브랜치에 **merge후에 push 수행**  
+>2. 원격 저장소가 가리키는 브랜치에 **merge후에 push 수행**  
   충돌이 나는 것에 대한 처리가 필요할 수 있음..
 
 ####_그럼 좀 안전하게 되돌리는 방법은 없을까?_
@@ -83,3 +74,9 @@ https://learngitbranching.js.org/?locale=ko
 - 장점 : 쉽고 기록이 남아있음 
 - 단점 : 브랜치 트리가 복잡해짐
 
+1. 되돌릴 위치에서 branch생성 후, 체크아웃
+2. 필요한 작업만 수행 후 merge
+3. 충돌이 나는 파일 우클릭 후 '저장소 것을 사용' 클릭하면 해당 브랜치만 적용
+
+
+### 3. Revert 사용하기
